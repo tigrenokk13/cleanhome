@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CleanHome Premium — Офіційний магазин</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="header-top">
+        <div class="container">
+            <a href="index.html" class="logo">Clean<span>Home Premium</span></a>
+            <div class="search-bar">
+                <input type="text" id="liveSearch" placeholder="Пошук косметики чи брендів...">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="user-actions">
+                <a href="../koshik/cart.html" class="icon-link">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="count">0</span>
+                </a>
+                <a href="../authorization/auth.html" class="auth-btn">Вхід</a>
+            </div>
+        </div>
+    </div>
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="index.html" class="active">Головна</a></li>
+                <li><a href="../brands/brands.html">Бренди</a></li>
+                <li><a href="../dostavka/oplata.html">Доставка</a></li>
+                <li><a href="../kontakti/kontakti.html">Контакти</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="container layout">
+    <aside class="sidebar">
+        <div class="category-widget">
+            <h3>Каталог</h3>
+            <ul id="categoryList">
+                <li data-cat="all" class="active-cat"><i class="fa-solid fa-border-all"></i> Всі товари</li>
+                <li data-cat="hair"><i class="fa-solid fa-scissors"></i> Догляд за волоссям</li>
+                <li data-cat="face"><i class="fa-solid fa-face-smile"></i> Догляд за обличчям</li>
+                <li data-cat="body"><i class="fa-solid fa-hand-holding-droplet"></i> Догляд за тілом</li>
+                <li data-cat="perfume"><i class="fa-solid fa-wind"></i> Парфумерія</li>
+            </ul>
+        </div>
+
+        <div class="filter-widget">
+            <h3>Бюджет (грн)</h3>
+            <p class="filter-hint">Діапазон ціни:</p>
+            <div class="dual-price-inputs">
+                <div class="price-box">
+                    <span>від</span>
+                    <input type="number" id="minPriceInput" min="0" max="2000" value="0">
+                </div>
+                <div class="price-box">
+                    <span>до</span>
+                    <input type="number" id="maxPriceInput" min="0" max="2000" value="2000">
+                </div>
+            </div>
+            <input type="range" min="0" max="2000" value="2000" id="priceRange" class="main-slider">
+        </div>
+    </aside>
+
+    <main class="content">
+        <section class="promo-slider">
+            <div class="slides">
+                <div class="slide"><img src="../Slider/slider_1.jpg" alt="Знижки на догляд"></div>
+                <div class="slide"><img src="../Slider/slider_2.jpg" alt="Нові надходження"></div>
+            </div>
+            <div class="slider-nav">
+                <button id="prev">❮</button>
+                <button id="next">❯</button>
+            </div>
+        </section>
+
+        <h2 class="section-title">Популярні товари</h2>
+        <div class="product-grid" id="productGrid">
+            <div class="product-card" data-price="450" data-category="hair">
+                <div class="badge">SALE</div>
+                <img src="../Tovar/1.jpg" alt="Шампунь">
+                <h4>Відновлюючий шампунь</h4>
+                <div class="price">450 ₴</div>
+                <button class="buy-btn">До кошика</button>
+            </div>
+            <div class="product-card" data-price="890" data-category="face">
+                <img src="../Tovar/2.jpg" alt="Сироватка">
+                <h4>Сироватка з вітаміном С</h4>
+                <div class="price">890 ₴</div>
+                <button class="buy-btn">До кошика</button>
+            </div>
+            <div class="product-card" data-price="320" data-category="body">
+                <img src="../Tovar/3.jpg" alt="Лосьйон">
+                <h4>Зволожуючий лосьйон</h4>
+                <div class="price">320 ₴</div>
+                <button class="buy-btn">До кошика</button>
+            </div>
+            <div class="product-card" data-price="1200" data-category="perfume">
+                <img src="../Tovar/4.jpg" alt="Парфуми">
+                <h4>Парфумована вода Floral</h4>
+                <div class="price">1200 ₴</div>
+                <button class="buy-btn">До кошика</button>
+            </div>
+            <div class="product-card" data-price="250" data-category="hair">
+                <img src="../Tovar/5.jpg" alt="Маска">
+                <h4>Маска для волосся</h4>
+                <div class="price">250 ₴</div>
+                <button class="buy-btn">До кошика</button>
+            </div>
+            <div class="product-card" data-price="540" data-category="face">
+                <img src="../Tovar/6.jpg" alt="Крем">
+                <h4>Денний крем SPF 30</h4>
+                <div class="price">540 ₴</div>
+                <button class="buy-btn">До кошика</button>
+            </div>
+        </div>
+    </main>
+</div>
+
+<footer class="footer">
+    <p>Edem Cosmetics © 2026 | Студент: Шелест Ігор ІТ-33</p>
+</footer>
+
+<script src="slider.js"></script>
+<script src="poshuk.js"></script>
+<script src="filter.js"></script>
+</body>
+</html>

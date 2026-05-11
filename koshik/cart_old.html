@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кошик — CleanHome Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+<header class="main-header">
+    <div class="header-top">
+        <div class="container">
+            <a href="../main/index.html" class="logo">Clean<span>Home Premium</span></a>
+            <div class="user-actions">
+                <a href="cart.html" class="icon-link active-link">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                    <span class="count" id="cartCount">0</span>
+                </a>
+                <a href="../authorization/auth.html" class="auth-btn">Вхід</a>
+            </div>
+        </div>
+    </div>
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="../main/index.php">Головна</a></li>
+                <li><a href="../brands/brands.html">Бренди</a></li>
+                <li><a href="../dostavka/oplata.html">Доставка</a></li>
+                <li><a href="../kontakti/kontakti.html">Контакти</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="cart-section">
+        <h1>Ваш кошик</h1>
+        
+        <div class="cart-container" id="cartContainer">
+            <div class="cart-items" id="cartItems">
+                </div>
+
+            <div class="cart-summary" id="cartSummary">
+                <h3>Підсумок замовлення</h3>
+                <div class="summary-row">
+                    <span>Товари:</span>
+                    <span id="totalItems">0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Загальна сума:</span>
+                    <span id="totalPrice">0 ₴</span>
+                </div>
+                <button class="checkout-btn" id="checkoutBtn">Оформити замовлення</button>
+                <button class="clear-btn" id="clearCart">Очистити кошик</button>
+            </div>
+        </div>
+
+        <div id="emptyMessage" style="display:none; text-align:center; padding: 50px;">
+            <i class="fa-solid fa-cart-ghost" style="font-size: 50px; color: var(--mint); margin-bottom: 20px;"></i>
+            <p>Ваш кошик порожній</p>
+            <a href="../main/index.html" class="back-link">Повернутися до покупок</a>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <p>CleanHome Premium © 2026 | Студент: Шелест Ігор ІТ-33</p>
+</footer>
+
+<script src="cart.js"></script>
+</body>
+</html>
